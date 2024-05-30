@@ -68,6 +68,7 @@ function Temperature() {
     }, 1000);
   }, [localTime]);
 
+  console.log(forecast);
   return (
     <div className="pt-6 pb-5 px-4 border rounded-lg flex flex-col justify-between dark:bg-dark-grey shadow-sm dark:shadow-none">
       <p className="flex justify-between items-center">
