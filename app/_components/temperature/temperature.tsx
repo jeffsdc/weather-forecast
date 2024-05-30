@@ -11,6 +11,7 @@ import {
 } from "@/app/_utils/icons";
 import { kelvinToCelsius } from "@/app/_utils/misc";
 import moment from "moment";
+import "moment/locale/pt-br";
 import React, { useMemo, useState } from "react";
 
 function Temperature() {
@@ -61,18 +62,17 @@ function Temperature() {
       // custom format: 24 hour format
       const formatedTime = localMoment.format("HH:mm:ss");
       // day of the week
-      const day = localMoment.format("dddd");
+      const day = localMoment.locale("pt-br").format("dddd");
 
       setLocalTime(formatedTime);
       setCurrentDay(day);
     }, 1000);
   }, [localTime]);
 
-  console.log(forecast);
   return (
     <div className="pt-6 pb-5 px-4 border rounded-lg flex flex-col justify-between dark:bg-dark-grey shadow-sm dark:shadow-none">
       <p className="flex justify-between items-center">
-        <span className="font-medium">{currentDay}</span>
+        <span className="font-medium capitalize">{currentDay}</span>
         <span className="font-medium">{localTime}</span>
       </p>
 
