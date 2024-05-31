@@ -13,7 +13,7 @@ function Wind() {
   const windDirection = forecast?.wind?.deg;
 
   if (!windSpeed || !windDirection) {
-    return <Skeleton className="h-[12rem] w-full col-span-2" />;
+    return <Skeleton className="h-[12rem] w-full col-span-1" />;
   }
   return (
     <div className="pt-6 pb-5 px-4 h-[12rem] border rounded-lg flex flex-col gap-3 dark:bg-dark-grey shadow-sm dark:shadow-none">

@@ -11,7 +11,7 @@ function Sunset() {
   const { forecast } = useGlobalContext();
 
   if (!forecast || !forecast?.sys || !forecast?.sys?.sunset) {
-    return <Skeleton className="h-[12rem] w-full col-span-2" />;
+    return <Skeleton className="h-[12rem] w-full col-span-1" />;
   }
 
   const times = forecast?.sys?.sunset;
